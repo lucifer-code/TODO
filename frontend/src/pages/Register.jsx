@@ -15,7 +15,7 @@ const Register = () => {
     setLoading(true);
     e.preventDefault();
     try {
-      // {console.log(data)}
+      {console.log(data)}
       const { data } = await axios.post(
         `${server}/users/new`,
         {
@@ -29,9 +29,10 @@ const Register = () => {
           },
           withCredentials: true,
         }
-      );
-
-      toast.success(data.message);
+        );
+        
+        toast.success(data.message);
+        {console.log(data)}
       setIsAuthenticated(true);
       setLoading(false);
     } catch (error) {

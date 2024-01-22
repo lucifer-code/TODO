@@ -9,7 +9,7 @@ config({
 });
 
 connectDB();
-const PORT = 4000;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(
     `Server is working on port:${PORT} in ${process.env.FRONTEND_URL} Mode`
